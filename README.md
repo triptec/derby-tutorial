@@ -10,11 +10,11 @@ Steps:
 
 +   1 Get derby-boilerplate
 
-`$git clone git://github.com/switz/derby-boilerplate.git`
+`$git clone git://github.com/switz/derby-boilerplate.git
 
-`$cd derby-boilerplate`
+$cd derby-boilerplate
 
-`$npm install`
+$npm install`
 
 
 Preliminary Steps:
