@@ -1,9 +1,14 @@
 Warning: WORK IN PROGRESS!
 ==========================
 
-Okay so this is supposed to become some sort of a tutorial building a snippet app. I'll try to be as thorough, also I'm really new to Derby and this will be an attempt to learn.
+Okay so this is supposed to become some sort of a tutorial building a snippet app. I'll try to be as thorough as possible, also I'm really new to Derby and this will be an attempt to learn.
 
 I will start out with the derby-boilerplate repo and go from that.
+
+For your information:
+
+    node: v0.8.12
+    npm: 1.2.12
 
 Steps:
 ------
