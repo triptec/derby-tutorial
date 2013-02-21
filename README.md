@@ -8,7 +8,7 @@ I will start out with the derby-boilerplate repo and go from that.
 Steps:
 ------
 
-1.0 Get derby-boilerplate
+1.0 Get derby-boilerplate and install all dependensies and get the app running
 
 
     $git clone git://github.com/switz/derby-boilerplate.git    
