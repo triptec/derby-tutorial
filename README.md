@@ -8,15 +8,13 @@ I will start out with the derby-boilerplate repo and go from that.
 Steps:
 ------
 
-+   1 Get derby-boilerplate
+1.0 Get derby-boilerplate
 
-`$git clone git://github.com/switz/derby-boilerplate.git`
 
-`$cd derby-boilerplate`
-
-`$npm install`
-
-`$node server.js`
+    $git clone git://github.com/switz/derby-boilerplate.git    
+    $cd derby-boilerplate
+    $npm install
+    $node server.js
 
 On this last step you should have ended with a Error like
 
@@ -36,7 +34,7 @@ More specific the last two lines, they try to get a facebook application key and
 
 So now we start the app with
 
-`$FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js `
+    $FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js
 
 So now we have a second error:
 
@@ -44,19 +42,20 @@ So now we have a second error:
 
 This is due to the application trying to connect to a mongodb server. So get over to their site and follow the instructions and install one. Then open a second terminal and start it with:
 
-`$sudo mongod`
+    $sudo mongod
 
 And get back to your other terminal and start the app again!
 
-`$FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js `
+    $FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js
 
 Now your derby server should be running, head on over to http://localhost:3000 an lo and behold you should see a login form and a register form.
 
-#####Sidenote
+#####Sidenote:
 
 I got this when I started it but I just tried again and it worked
 
 Error:
+
     timers.js:103
                 if (!process.listeners('uncaughtException').length) throw e;
                                                                           ^
