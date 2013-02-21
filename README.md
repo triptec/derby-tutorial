@@ -10,11 +10,59 @@ Steps:
 
 +   1 Get derby-boilerplate
 
-`$git clone git://github.com/switz/derby-boilerplate.git
+`$git clone git://github.com/switz/derby-boilerplate.git`
 
-$cd derby-boilerplate
+`$cd derby-boilerplate`
 
-$npm install`
+`$npm install`
+
+`$node server.js`
+
+On this last step you should have ended with a Error like
+
+`Error: OAuth2Strategy requires a clientID option`
+
+This is due to those lines of code in ./src/server/index.coffee
+
+    # Authentication setup
+    strategies =
+      facebook:
+        strategy: require("passport-facebook").Strategy
+        conf:
+          clientID: process.env.FACEBOOK_KEY
+          clientSecret: process.env.FACEBOOK_SECRET
+
+More specific the last two lines, they try to get a facebook application key and secret. So goto http://developers.facebook.com and create a application and get the app cridetials.
+
+So now we start the app with
+
+`$FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js `
+
+So now we have a second error:
+
+`Error: failed to connect to [localhost:27017]`
+
+This is due to the application trying to connect to a mongodb server. So get over to their site and follow the instructions and install one. Then open a second terminal and start it with:
+
+`$sudo mongod`
+
+And get back to your other terminal and start the app again!
+
+`$FACEBOOK_KEY='<your fb key>' FACEBOOK_SECRET='<your fb secret>' node server.js `
+
+Now your derby server should be running, head on over to http://localhost:3000 an lo and behold you should see a login form and a register form.
+
+#####Sidenote
+
+I got this when I started it but I just tried again and it worked
+
+Error:
+    timers.js:103
+                if (!process.listeners('uncaughtException').length) throw e;
+                                                                          ^
+    Error: Model bundling took longer than 1000 ms
+        at Object.onBundleTimeout [as _onTimeout] (/Users/frasse/Documents/Development/Node.js/derby/snippster.io/node_modules/racer/lib/bundle/bundle.Model.js:63:9)
+        at Timer.list.ontimeout (timers.js:101:19)
 
 
 Preliminary Steps:
