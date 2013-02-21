@@ -13,7 +13,9 @@ For your information:
 Steps:
 ------
 
-1.0 Get derby-boilerplate and install all dependensies and get the app running
+###1.0 Get derby-boilerplate and install all dependensies and get the app running
+
+Okay, crack up a terminal and run the following commands to clone the boilerplate repo and then cd into it and run npm to install all the dependensies of the repo, this will install derby and many other modules.
 
 
     $git clone git://github.com/switz/derby-boilerplate.git    
